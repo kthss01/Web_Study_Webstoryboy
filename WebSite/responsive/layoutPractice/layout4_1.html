@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Layout2</title>
+  <style media="screen">
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    #wrap {
+      width: 100%;
+    }
+
+    header {
+      width: 100%;
+      height: 150px;
+      background: #81c784;
+    }
+
+    aside {
+      float: left;
+      width: 30%;
+      height: 700px;
+      background: #66bb6a;
+    }
+
+    section {
+      float: left;
+      width: 40%;
+      height: 700px;
+      background: #4caf50;
+    }
+
+    article {
+      float: left;
+      width: 30%;
+      height: 700px;
+      background: #43a047;
+    }
+
+    footer {
+      clear: both;
+      width: 100%;
+      height: 150px;
+      background: #388e3c;
+    }
+
+    /* 1200px 딱 하면 스크롤바 나올 수 있음 */
+    /* 화면 너비 0 ~ 1200px */
+    @media (max-width: 1220px) {
+      aside {
+        width: 40%;
+      }
+
+      section {
+        width: 60%;
+      }
+
+      article {
+        /* 이거 안써도 나타남 */
+        /* clear: both;
+        float: none; */
+        width: 100%;
+        height: 300px;
+      }
+    }
+
+    /* 화면 너비 0 ~ 768 */
+    @media (max-width: 768px) {
+      aside {
+        /* float: none; */
+        width: 100%;
+        height: 300px;
+      }
+
+      section {
+        /* float: none; */
+        width: 100%;
+        height: 300px;
+      }
+    }
+
+    /* 화면 너비 0 ~ 480 */
+    @media (max-width: 480px) {
+      header {
+        height: 300px;
+      }
+
+      aside {
+        height: 200px;
+      }
+
+      section {
+        height: 200px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrap">
+    <header></header>
+    <aside></aside>
+    <section></section>
+    <article></article>
+    <footer></footer>
+  </div>
+</body>
+
+</html>
