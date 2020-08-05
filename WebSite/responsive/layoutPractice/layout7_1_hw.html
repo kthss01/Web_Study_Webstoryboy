@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Layout5</title>
+  <style media="screen">
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #ffff;
+    }
+
+    #wrap {
+      width: 1200px;
+      margin: 0 auto;
+    }
+
+    .header {
+      width: 100%;
+      height: 100px;
+      background-color: #e3f2fd;
+    }
+
+    .nav {
+      width: 100%;
+      height: 300px;
+      background-color: #bbdefb;
+    }
+
+    .aside {
+      float: left;
+      width: 33.3333%;
+      height: 400px;
+      background-color: #64b5f6;
+    }
+
+    .article1 {
+      float: left;
+      width: 66.6666%;
+      height: 200px;
+      background-color: #2196f3;
+    }
+
+    .article2 {
+      float: left;
+      width: 66.6666%;
+      height: 200px;
+      background-color: #1e88e5;
+    }
+
+    .section1 {
+      float: left;
+      width: 33.3333%;
+      height: 300px;
+      background-color: #1976d2;
+    }
+
+    .section2 {
+      float: left;
+      width: 33.3333%;
+      height: 300px;
+      background-color: #1565c0;
+    }
+
+    .section3 {
+      float: left;
+      width: 33.3333%;
+      height: 300px;
+      background-color: #0d47a1;
+    }
+
+    .section4 {
+      overflow: hidden;
+      width: 90%;
+      padding: 5%;
+      height: 200px;
+      background-color: #82b1ff;
+    }
+
+    .section4>div {
+      width: 21%;
+      margin: 2%;
+      height: 170px;
+      float: left;
+      border-radius: 10px;
+      background-color: #2979ff;
+    }
+
+    .footer {
+      clear: both;
+      width: 100%;
+      height: 100px;
+      background-color: #448aff;
+    }
+
+    /* 화면 너비 0 ~ 1200px  */
+    @media (max-width: 1220px) {
+      #wrap {
+        width: 100%;
+      }
+
+      .section1 {
+        width: 50%;
+      }
+
+      .section2 {
+        width: 50%;
+      }
+
+      .section3 {
+        display: none;
+      }
+
+      .section4>div {
+        width: 29.3333%;
+      }
+
+      section>div:nth-child(4n) {
+        display: none;
+      }
+    }
+
+    /* 화면 너비 0 ~ 768px  */
+    @media (max-width: 768px) {
+      .section1 {
+        width: 100%;
+        height: 150px;
+      }
+
+      .section2 {
+        width: 100%;
+        height: 150px;
+      }
+    }
+
+    /* 화면 너비 0 ~ 480px  */
+    /* 내 컴퓨터 500px 이상 화면 안작아져서 501로 잡음 */
+    @media (max-width: 501px) {
+      .aside {
+        width: 100%;
+        height: 150px;
+      }
+
+      .article1 {
+        width: 100%;
+        height: 150px;
+      }
+
+      .article2 {
+        width: 100%;
+        height: 150px;
+      }
+
+      .section4>div {
+        width: 96%;
+        /* 이거 왜그런지 체크필요 */
+        height: 25.3333%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="wrap">
+    <header class="header"></header>
+    <nav class="nav"></nav>
+    <aside class="aside"></aside>
+    <article class="article1"></article>
+    <article class="article2"></article>
+    <section class="section1"></section>
+    <section class="section2"></section>
+    <section class="section3"></section>
+    <section class="section4">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </section>
+    <footer class="footer"></footer>
+  </div>
+</body>
+
+</html>
