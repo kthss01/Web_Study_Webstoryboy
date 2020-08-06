@@ -6,4 +6,4 @@ https://www.youtube.com/c/Webstoryboy/
 http://kthss01.dothome.co.kr/web/index.html
 
 반응형 사이트 만들기 20.08.03 ~
-
+http://kthss01.dothome.co.kr/responsive/html5/index.html
