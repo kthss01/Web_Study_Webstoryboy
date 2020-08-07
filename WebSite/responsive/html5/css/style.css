@@ -13,8 +13,38 @@ body {
   background-color: #eaf7fd;
 }
 
+#contents .container {
+  border-right: 1px solid #dbdbdb;
+  border-left: 1px solid #dbdbdb;
+}
+
+#cont_left {
+  float: left;
+  width: 250px;
+}
+
+#cont_center {
+  overflow: hidden;
+  min-height: 1300px;
+  margin-right: 250px;
+  border-right: 1px solid #dbdbdb;
+  border-left: 1px solid #dbdbdb;
+}
+
+#cont_right {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 250px;
+}
+
+#footer {
+  border-top: 1px solid #dbdbdb;
+}
+
 /* 컨테이너 */
 .container {
+  position: relative;
   width: 1200px;
   margin: 0 auto;
   /* background: rgba(0, 0, 0, 0.3); */
@@ -244,6 +274,50 @@ body {
     0 0 0 100px rgba(0, 0, 0, 0.1) inset;
 }
 
+/* 컨텐츠 영역 */
+.column {
+  padding: 15px;
+  border-bottom: 1px solid #dbdbdb;
+}
+
+.column .col_tit {
+  font-size: 20px;
+  color: #2f7fa6;
+  padding-bottom: 5px;
+}
+
+.column .col_desc {
+  border-bottom: 1px dashed  #dbdbdb;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  color: #878787;
+  line-height: 18px;
+}
+
+.column.col1 {}
+
+.column.col2 {}
+
+.column.col3 {
+  border-bottom: 0;
+}
+
+.column.col4 {}
+
+.column.col5 {}
+
+.column.col6 {
+  border-bottom: 0;
+}
+
+.column.col7 {}
+
+.column.col8 {}
+
+.column.col9 {
+  border-bottom: 0;
+}
+
 /* mediaquery */
 /* 더 큰 모니터 */
 /* 화면 너비 0 ~ 1220px */
@@ -254,6 +328,10 @@ body {
 
   .row {
     padding: 0 15px;
+  }
+
+  #contents .container {
+    border: 0;
   }
 
   .title .btn {
@@ -268,6 +346,17 @@ body {
 /* 타블렛 */
 /* 화면 너비 0 ~ 960px */
 @media (max-width: 960px) {
+  #cont_center {
+    margin-right: 0;
+    border-right: 0;
+  }
+
+  #cont_right {
+    position: static;
+    width: 100%;
+    border-top: 1px solid  #dbdbdb;
+  }
+
   .nav>div {
     float: none;
     width: 100%;
@@ -292,7 +381,16 @@ body {
 
 /* 타블렛 */
 /* 화면 너비 0 ~ 768px */
-@media (max-width: 768px) {}
+@media (max-width: 768px) {
+  #cont_left {
+    float: none;
+    width: 100%;
+  }
+
+  #cont_center {
+    border-left: 0;
+  }
+}
 
 /* 여기부터 모바일 생각 */
 /* 화면 너비 0 ~ 600px */
