@@ -403,10 +403,12 @@ body {
   text-overflow: ellipsis;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2; /* 2줄 이면 2 3줄이면 3*/
+  -webkit-line-clamp: 2;
+  /* 2줄 이면 2 3줄이면 3*/
   padding-left: 8px;
   padding-bottom: 5px;
-  max-height: 35px; /* ie에선 깨져서 이거 준거 */
+  max-height: 35px;
+  /* ie에선 깨져서 이거 준거 */
 }
 
 .notice2 li:before {
@@ -427,6 +429,62 @@ body {
   color: #878787;
   text-transform: uppercase;
   font-size: 10px;
+}
+
+/* 블로그1 */
+.blog1 img {
+  width: 100%;
+}
+
+.blog1 .img-retina {
+  display: none;
+}
+
+/* 화면 비율이 1.5가 되었을 때 retina 활성화 시키고 normal 비활성화 시킨다는 의미 */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5),
+only screen and (min-resolution: 1.5dppx) {
+  .blog1 .img-retina {
+    display: initial;
+  }
+
+  .blog1 .img-normal {
+    display: none;
+  }
+}
+
+/* 블로그2 */
+.blog2 h5 {
+  color: #fff;
+  text-align: center;
+  padding: 30px 30px;
+  text-transform: uppercase;
+}
+
+.blog2 p {
+  padding-top: 5px;
+}
+
+.blog2 .img-retina {
+  background-image: url(../img/blog4_@1.jpg);
+  background-size: cover;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (min-device-pixel-ratio: 2),
+only screen and (min-resolution: 2dppx) {
+  .blog2 .img-retina {
+    background-image: url(../img/blog4_@2.jpg);
+  }
+}
+
+/* 모바일일 때는 3배로 */
+@media only screen and (-webkit-min-device-pixel-ratio: 3),
+only screen and (min-device-pixel-ratio: 3),
+only screen and (min-resolution: 3dppx) {
+  .blog2 .img-retina {
+    background-image: url(../img/blog4_@3.jpg);
+  }
 }
 
 /* mediaquery */
